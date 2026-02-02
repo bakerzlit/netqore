@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netqor - Custom Web Design & Digital Growth</title>
+    <meta name="description"
+        content="We build high-converting websites for businesses. Custom design, SEO, and fast performance to help you grow. Get a free consultation today.">
+
+    <!-- Schema.org for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Netqor",
+        "image": "[Your-Image-URL]",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "[City]",
+            "addressRegion": "[State]",
+            "addressCountry": "US"
+        },
+        "url": "https://www.yourwebsite.com",
+        "telephone": "+256726092290",
+        "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-slate-600 antialiased bg-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md border-b border-slate-200 z-50 transition-all duration-300"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 group">
+                    <div
+                        class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl font-display group-hover:bg-brand-700 transition-colors">
+                        N
+                    </div>
+                    <span class="font-display font-bold text-xl text-slate-900">Netqor</span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-brand-600 font-semibold">Home</a>
+                    <a href="services.html"
+                        class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Services</a>
+                    <a href="about.html"
+                        class="text-slate-600 hover:text-brand-600 font-medium transition-colors">About</a>
+                    <a href="contact.html"
+                        class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Contact</a>
+                    <a href="contact.html"
+                        class="bg-slate-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-brand-600 transition-all hover:shadow-lg transform hover:-translate-y-0.5">
+                        Start Project
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button onclick="toggleMobileMenu()"
+                        class="text-slate-600 hover:text-slate-900 focus:outline-none p-2" aria-label="Toggle menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html"
+                    class="block px-3 py-4 text-base font-medium text-brand-600 bg-slate-50 rounded-md">Home</a>
+                <a href="services.html"
+                    class="block px-3 py-4 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50 rounded-md">Services</a>
+                <a href="about.html"
+                    class="block px-3 py-4 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50 rounded-md">About</a>
+                <a href="contact.html"
+                    class="block px-3 py-4 text-base font-medium text-slate-600 hover:text-brand-600 hover:bg-slate-50 rounded-md">Contact</a>
+                <a href="contact.html" class="block px-3 py-4 text-base font-medium text-brand-600 font-bold mt-2">Start
+                    Project →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-brand-50 opacity-70"></div>
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-100/20 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-up">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 text-brand-600 font-semibold text-sm mb-6 border border-brand-100">
+                        <span class="flex h-2 w-2 rounded-full bg-brand-600 animate-pulse"></span>
+                        Accepting New Projects
+                    </div>
+                    <h1 class="font-display text-5xl lg:text-7xl font-bold text-slate-900 leading-[1.1] mb-6">
+                        We Build Websites That Grow Your Business
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed max-w-lg">
+                        Turn visitors into customers with a high-performance website. Custom design, SEO-optimized
+                        content, and seamless user experiences.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <a href="contact.html"
+                            class="inline-flex justify-center items-center px-8 py-4 bg-brand-600 text-white rounded-full font-semibold text-lg hover:bg-brand-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Get Your Free Proposal
+                        </a>
+                        <a href="services.html"
+                            class="inline-flex justify-center items-center px-8 py-4 bg-white text-slate-900 border-2 border-slate-200 rounded-full font-semibold text-lg hover:border-brand-600 hover:text-brand-600 transition-all">
+                            View Our Work
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="flex items-center gap-6 text-sm text-slate-500 flex-wrap">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>SEO Optimized</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Mobile Responsive</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Fast Loading</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative fade-up" style="transition-delay: 200ms;">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Web Development" class="w-full h-auto object-cover" loading="eager">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+
+                        <!-- Floating Stats Card -->
+                        <div
+                            class="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur rounded-xl p-4 shadow-lg">
+                            <div class="flex items-center gap-4">
+                                <div class="flex -space-x-2">
+                                    <img class="w-10 h-10 rounded-full border-2 border-white"
+                                        src="https://i.pravatar.cc/150?img=12" alt="Client">
+                                    <img class="w-10 h-10 rounded-full border-2 border-white"
+                                        src="https://i.pravatar.cc/150?img=33" alt="Client">
+                                    <img class="w-10 h-10 rounded-full border-2 border-white"
+                                        src="https://i.pravatar.cc/150?img=59" alt="Client">
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900">100+ Businesses Launched</div>
+                                    <div class="text-sm text-slate-500">driving real revenue</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview (Preview) -->
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 fade-up">
+                <h2 class="font-display text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Complete Digital Solutions
+                </h2>
+                <p class="text-lg text-slate-600">We don't just design pretty websites. We build digital engines that
+                    drive growth.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Preview items -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover-lift border border-slate-100 fade-up">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-3">Custom Web Design</h3>
+                    <p class="text-slate-600 mb-4">Tailor-made designs that reflect your brand and convert visitors into
+                        loyal customers.</p>
+                    <a href="services.html" class="text-brand-600 font-semibold hover:underline">Learn more &rarr;</a>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover-lift border border-slate-100 fade-up"
+                    style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-3">E-Commerce</h3>
+                    <p class="text-slate-600 mb-4">Seamless online stores that make buying easy and secure for your
+                        customers.</p>
+                    <a href="services.html" class="text-brand-600 font-semibold hover:underline">Learn more &rarr;</a>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm hover-lift border border-slate-100 fade-up"
+                    style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-brand-100 rounded-xl flex items-center justify-center text-brand-600 mb-6">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-slate-900 mb-3">SEO & Marketing</h3>
+                    <p class="text-slate-600 mb-4">Get found on Google and reach the right audience with data-driven
+                        strategies.</p>
+                    <a href="services.html" class="text-brand-600 font-semibold hover:underline">Learn more &rarr;</a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="services.html"
+                    class="inline-block px-8 py-3 bg-slate-900 text-white rounded-full font-semibold hover:bg-slate-800 transition-colors">Explore
+                    All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Preview -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="font-display text-3xl lg:text-4xl font-bold mb-6">Client Success Stories</h2>
+                    <p class="text-slate-400 text-lg mb-8">We partner with ambitious brands to create digital
+                        experiences that matter.</p>
+
+                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 relative">
+                        <div class="text-yellow-400 text-2xl mb-4">★★★★★</div>
+                        <p class="text-slate-200 text-lg italic mb-6">"Netqor completely transformed our online
+                            presence. Our leads increased by 150% in just the first three months. The team is incredibly
+                            professional and skilled."</p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://i.pravatar.cc/150?img=32" alt="Reviewer"
+                                class="w-12 h-12 rounded-full border-2 border-slate-600">
+                            <div>
+                                <div class="font-bold">Sarah Mitchell</div>
+                                <div class="text-slate-400 text-sm">CEO, TechStart</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <!-- Benefit 1 -->
+                    <div class="flex gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-900 flex items-center justify-center text-brand-400 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-1">On-Time Delivery</h3>
+                            <p class="text-slate-400">We respect deadlines. Your site launches when we say it will.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div class="flex gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-900 flex items-center justify-center text-brand-400 flex-shrink-0">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-1">Ongoing Support</h3>
+                            <p class="text-slate-400">We don't ghost you after launch. We're here for the long haul.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="about.html"
+                            class="text-brand-400 hover:text-white font-semibold transition-colors">Read our story
+                            &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-brand-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center fade-up">
+            <h2 class="font-display text-3xl lg:text-5xl font-bold text-white mb-6">Ready to Scale Your Business?</h2>
+            <p class="text-brand-100 text-xl mb-10 max-w-2xl mx-auto">Let's build a website that works as hard as you
+                do. Get a custom proposal in 24 hours.</p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="contact.html"
+                    class="inline-flex justify-center items-center px-8 py-4 bg-white text-brand-600 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-xl transform hover:-translate-y-1">
+                    Start Your Project
+                </a>
+                <a href="https://wa.me/256726092290" target="_blank"
+                    class="inline-flex justify-center items-center px-8 py-4 bg-brand-700 text-white border-2 border-brand-500 rounded-full font-bold text-lg hover:bg-brand-800 transition-all">
+                    Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-brand-600 rounded flex items-center justify-center text-white font-bold font-display">
+                            N</div>
+                        <span class="font-display font-bold text-xl text-white">Netqor</span>
+                    </div>
+                    <p class="text-slate-400 max-w-sm">Helping businesses grow with custom web design and digital
+                        marketing solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Web Design</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">E-Commerce</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">SEO</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="mailto:hello@netqor.com"
+                                class="hover:text-white transition-colors">hello@netqor.com</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors">Get a Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">© 2024 Netqor. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <span class="sr-only">Facebook</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <span class="sr-only">Instagram</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06h.63zm1.673 5.377a2.531 2.531 0 100 5.062 2.531 2.531 0 000-5.062zM21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <span class="sr-only">Twitter</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                        </svg>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd"
+                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/256726092290" target="_blank"
+        class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 z-40 flex items-center gap-2 group"
+        aria-label="Chat on WhatsApp">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.127.557 4.16 1.618 5.984L.58 23.42l5.436-1.038A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0z" />
+        </svg>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Animation Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+
+        // Sticky Nav
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+
+</html>
